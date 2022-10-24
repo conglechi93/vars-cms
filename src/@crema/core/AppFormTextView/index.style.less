@@ -1,0 +1,47 @@
+@app-form-text-view: app-form-text-view;
+@app-form-text-view-item: ~'@{app-form-text-view}-item';
+
+@import '@shared/styles/variable';
+@import '~antd/lib/form/style/index.less';
+
+.@{app-form-text-view} {
+    &:extend(.ant-form);
+
+    > .ant-row {
+        > .ant-col {
+            margin-bottom: 0;
+        }
+    }
+
+    &-vertical {
+        .@{app-form-text-view-item} {
+            flex-direction: column;
+            margin-bottom: @form-item-margin-bottom;
+            
+            &-label {
+                font-size: @form-item-label-font-size;
+                margin: @form-vertical-label-margin;
+                padding: @form-vertical-label-padding;
+
+                > label {
+                    margin: 0;
+                    height: auto;
+                }
+            }
+        
+            &-content {
+                width: 100%;
+                margin: 0;
+                font-weight: @font-weight-regular;
+
+                > p, ul {
+                    margin-bottom: 0;
+                }
+
+                ul {
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}

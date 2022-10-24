@@ -1,0 +1,19 @@
+{
+  "common.viewAll": "View all",
+  "common.notifications": "Notification",
+  "common.rememberMe": "Remember me",
+  "common.forgetPassword": "Forgot password?",
+  "common.login": "Login",
+  "common.signup": "Signup",
+  "common.dontHaveAccount": "Don't have account?",
+  "common.orLoginWith": "Login with: ",
+
+  "dashboard.messages": "Messages",
+
+  "route.group.profileManagement": "Demo",
+  "route.profile": "Profile",
+  
+
+  "profile.introduction": "Introduction",
+  "profile.brokerInformation": "Broker information"
+}

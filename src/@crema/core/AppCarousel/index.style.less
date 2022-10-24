@@ -1,0 +1,29 @@
+@import '@shared/styles/variable';
+
+.app-carousel {
+    &-dot-bottom {
+        padding-top: 1.5rem;
+    }
+
+    .slick-dots {
+        margin-bottom: -28px;
+        margin-left: 0;
+        margin-right: 0;
+        > * {
+            > button {
+                border-radius: 50% !important;
+                background-color: @carousel-dot-inactive-color !important;
+            }
+
+            &.slick-active > button {
+                background-color: @carousel-dot-active-color !important;
+            }
+
+            > button {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

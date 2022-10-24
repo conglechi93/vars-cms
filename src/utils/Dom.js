@@ -1,0 +1,39 @@
+const downloadFile = (fileName, url) => {
+  const dlink = document.createElement('a');
+  dlink.download = fileName;
+  dlink.href = url;
+  dlink.click();
+  dlink.remove();
+};
+
+const createSyntheticEvent = (event) => {
+  let isDefaultPrevented = false;
+  let isPropagationStopped = false;
+  const preventDefault = () => {
+    isDefaultPrevented = true;
+    event.preventDefault();
+  };
+  const stopPropagation = () => {
+    isPropagationStopped = true;
+    event.stopPropagation();
+  };
+  return {
+    nativeEvent: event,
+    currentTarget: event.currentTarget,
+    target: event.target,
+    bubbles: event.bubbles,
+    cancelable: event.cancelable,
+    defaultPrevented: event.defaultPrevented,
+    eventPhase: event.eventPhase,
+    isTrusted: event.isTrusted,
+    preventDefault,
+    isDefaultPrevented: () => isDefaultPrevented,
+    stopPropagation,
+    isPropagationStopped: () => isPropagationStopped,
+    persist: () => {},
+    timeStamp: event.timeStamp,
+    type: event.type,
+  };
+};
+
+export {downloadFile, createSyntheticEvent};

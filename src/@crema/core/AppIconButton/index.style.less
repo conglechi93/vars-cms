@@ -1,0 +1,35 @@
+@import '@shared/styles/variable';
+
+.ant-btn.icon-btn {
+  border: 0 none;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: @text-color;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@black, 7);
+    color: @grey-700;
+  }
+
+  &.active {
+    color: @primary-color;
+
+    &:hover, &:focus {
+      background-color: fade(@black, 7);
+      color: @grey-700;
+    }
+  }
+  & svg {
+    display: block;
+    font-size: 18px;
+
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 20px;
+    }
+  }
+}

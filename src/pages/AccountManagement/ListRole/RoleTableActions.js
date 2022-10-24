@@ -1,0 +1,2 @@
+export const ROLE_TABLE_VIEW = 'ROLE_TABLE_VIEW';
+export const ROLE_TABLE_EDIT = 'ROLE_TABLE_EDIT';

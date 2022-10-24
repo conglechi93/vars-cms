@@ -1,0 +1,104 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+.table-responsive .ant-table {
+  min-height: .01%;
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background-color: #7a7c80;
+  }
+
+  &-cell {
+    &.paragraph {
+      min-width: 150px;
+
+      @media (max-width: @screen-lg) {
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+.table-nowrap thead > tr > th,
+.table-nowrap tbody > tr > th,
+.table-nowrap tfoot > tr > th,
+.table-nowrap thead > tr > td,
+.table-nowrap tbody > tr > td,
+.table-nowrap tfoot > tr > td {
+  white-space: nowrap;
+}
+
+.table-head-nowrap thead > tr > th,
+.table-head-nowrap thead > tr > td {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .table-responsive .ant-table {
+    width: 100%;
+    overflow-y: hidden;
+    border: @border-style-base @border-width-base @border-color-base;
+    // -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+.hoverColor {
+  & tbody > tr {
+    .transition(all .2s ease);
+    .scale(1);
+
+    &:hover {
+      .translateY(-2px);
+      box-shadow: 0 3px 10px 0 fade(@black, 20);
+      background-color: fade(@primary-color, 10);
+    }
+  }
+
+  & .ant-table-tbody > tr.ant-table-row:hover > td {
+    background-color: transparent;
+  }
+}
+
+.app-table {
+  .ant-typography {
+    margin-bottom: 0;
+  }
+}
+
+// Nested
+.table-nested {
+  .ant-table {
+    background: @grey-100;
+    border-radius: 0;
+
+    & table {
+      & > thead {
+        > tr > th {
+          background: @grey-300;
+          border-radius: 0 !important;
+        }
+      }
+
+      & > tbody {
+        > tr:last-child {
+          td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

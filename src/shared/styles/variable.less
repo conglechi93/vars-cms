@@ -1,0 +1,241 @@
+@import '~antd/lib/style/themes/default.less';
+
+@root-entry-name: default;
+
+// Font Family
+@font-family: 'Plus Jakarta Sans', sans-serif;
+
+// Font Weight
+@font-weight-light: 400;
+@font-weight-regular: 500;
+@font-weight-medium: 600;
+@font-weight-bold: 700;
+
+// Base background color for most components
+@component-background: #fff;
+
+//global style variables
+@secondary-color: #F04F47;
+
+@sidebar-bg-color: @white;
+@sidebar-text-color: @text-color;
+@sidebar-dark-bg-color: #001529;
+@sidebar-curved-menu-color: #F4F7FE;
+
+@heading-color: @text-color;
+@font-size-base: 15px;
+@font-size-lg: @font-size-base;
+@font-size-sm: 14px;
+@heading-1-size: ceil(@font-size-base * 1.8);
+@heading-2-size: ceil(@font-size-base * 1.6);
+@heading-3-size: ceil(@font-size-base * 1.4);
+@heading-4-size: ceil(@font-size-base * 1.2);
+@heading-5-size: ceil(@font-size-base * 1);
+@heading-6-size: ceil(@font-size-base * 1);
+// https://github.com/ant-design/ant-design/issues/20210
+@line-height-base: 1.35;
+@border-radius-sm: @border-radius-base;
+@border-radius-30: 30px;
+@border-radius-circle: 50%;
+
+@nav-bar-bg: @sidebar-bg-color;
+@nav-bar-text-color: @sidebar-text-color;
+
+// Card
+// ---
+@card-head-color: @text-color;
+@card-head-font-size: @font-size-lg;
+@card-head-padding: 16px;
+@card-head-padding-sm: (@card-head-padding / 2);
+@card-head-height: 48px;
+@card-head-height-sm: 36px;
+@card-inner-head-padding: 12px;
+@card-padding-base: 24px;
+@card-background: @component-background;
+@card-radius: 16px;
+
+//Col Space
+@col-margin-base: 16px;
+@col-margin-res: 16px;
+
+// Rate
+// ---
+@rate-star-color: @yellow-6;
+@rate-star-bg: rgba(0, 0, 0, 0.26);
+
+//Framed Layout
+@framed-layout-base: 20px;
+
+// Page variable
+@icons-text-margin: 0 8px 0 0;
+@icons-size: 16px;
+@view-max-width: 1089px;
+
+///// Custom
+@layout-horizontal-padding-default: 20px;
+@layout-horizontal-padding-lg: 10px;
+
+///// Template
+
+// Global
+@primary-color: @main-color;
+@background-radius-base: 20px;
+@success-color: @green-normal;
+@line-height-base: 1.6;
+@line-height-icon: 1.4;
+@border-radius-base: 7px;
+@control-border-radius: @border-radius-base;
+
+// Color
+@main-color: #d10404;
+@main-color-secondary: #100A55;
+@main-color-black: #000929;
+@main-color-white: #FFFFFF;
+
+@main-100: #FFD8E0;
+@main-200: #FAB2C1;
+@main-300: #F56685;
+@main-400: #F8455B;
+@main-500: #EE0033;
+@main-600: #EF0F3F;
+@main-700: #D7002E;
+@main-800: #AD0025;
+@main-900: #7A252D;
+
+
+// Grey Color
+@grey-50: #F9FAFB;
+@grey-100: #F4F4F6;
+@grey-200: #E5E6EB;
+@grey-300: #D3D5DA;
+@grey-400: #9EA3AE;
+@grey-500: #6C727F;
+@grey-600: #4D5461;
+@grey-700: #394150;
+@grey-800: #212936;
+@grey-900: #0B0A0F;
+
+// Yellow Color
+@yellow-light: #FFF1E0;
+@yellow-normal: #FFB154;
+
+// Green Color
+@green-light: rgba(111, 207, 151, 0.1);
+@green-normal: #27AE60;
+
+// Blue Color
+@blue-light: rgba(111, 207, 151, 0.1);
+@blue-normal: #00DDD0;
+
+// Typography
+@heading-color: @main-color-black;
+@heading-1-size: 64px;
+@heading-2-size: 40px;
+@heading-3-size: 32px;
+@heading-4-size: 24px;
+@typography-title-margin-bottom: 0.5em;
+
+// Card
+@card-head-font-size-lg: 24px;
+@card-head-font-size-default: 18px;
+@card-head-padding: 0; // Unset
+@card-head-vertical-padding-lg: 32px;
+@card-head-vertical-padding-default: 24px;
+@card-head-height: @card-head-font-size;
+@card-shadow: none; // Unset
+@card-padding-base: 24px;
+@card-padding-mini: 16px;
+@card-background: unset; // Unset
+@card-head-background: unset; // Unset
+@card-bg-default: @main-color-white;
+@card-bg-secondary: @main-100;
+
+// Border color
+@border-100: @main-300;
+@border-200: @main-400;
+@border-color-base: @main-200;
+@border-color-split: @main-200;
+@border-main-color: @main-400;
+
+// Text
+@text-color: @main-color-black;
+@text-color-secondary: @main-color-secondary;
+@text-color-disabled: rgb(149, 156, 169);
+@text-color-hint: #aeafb8;
+@text-color-white: @white;
+
+// Rate
+
+// Tag
+@success-color-deprecated-bg: @green-light;
+@success-color-deprecated-border: transparent;
+
+// Button
+@btn-height-base: 40px;
+@btn-height-lg: 48px;
+@btn-height-sm: 36px;
+@btn-line-height: 1;
+@btn-default-color: @main-color;
+@btn-border-radius-base: 8px;
+@btn-height-base: 40px;
+@btn-height-lg: 48px;
+@btn-height-sm: 32px;
+@btn-default-border: @main-300;
+@btn-font-weight: @font-weight-bold;
+@btn-default-bg: @grey-100;
+
+// Input
+@input-height-base: 40px;
+@input-height-lg: 40px;
+@input-height-sm: 24px;
+@input-padding-horizontal: 12px;
+@input-padding-horizontal-base: 12px;
+@input-padding-horizontal-sm: 12px;
+@input-padding-horizontal-lg: 14px;
+@input-padding-vertical-base: 7px;
+@input-padding-vertical-sm: 4px;
+@input-padding-vertical-lg: 7px;
+@input-placeholder-color: hsv(0, 0, 75%);
+@input-color: @text-color;
+@input-bg: @component-background;
+@input-placeholder-color: @grey-500;
+@input-border-color: @grey-300;
+
+// Carousel
+@carousel-dot-width: 12px;
+@carousel-dot-height: 12px;
+@carousel-dot-active-width: 12px;
+@carousel-dot-inactive-color: fade(@main-color, 80%);
+@carousel-dot-active-color: @main-color;
+
+// Form
+@form-vertical-label-padding: 0px 0 0px 0px;
+@form-item-label-font-size: 14px;
+@form-item-margin-bottom: 20px;
+@label-color: @text-color;
+
+// Checkbox
+@checkbox-border-radius: 3px;
+
+// Font size
+@text-xl: 1.25rem;
+@text-lg: 1.125rem;
+@text-md: 1rem;
+@text-sm: 0.875rem;
+@text-xs: 0.75rem;
+
+// Layout
+@layout-body-background: #ffffff;
+@body-background: @layout-body-background;
+
+// Pagination
+@pagination-item-size: 40px;
+
+// Table
+@table-padding-vertical: 4px;
+
+// Modal
+@modal-body-padding: 8px 24px;
+
+// Others
+@avatar-bg: @grey-100;

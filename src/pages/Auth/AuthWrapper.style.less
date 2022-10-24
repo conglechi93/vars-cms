@@ -1,0 +1,444 @@
+@import '../../shared/styles/variable';
+
+@logo-height: 60px;
+@logo-margin-bottom: 1rem;
+@logo-margin-top : 1.5rem;
+
+.auth-title {
+  display: none;
+  .app-logo {
+    scale: 0.7;
+    margin-bottom: -@logo-margin-bottom;
+    min-width: 300px;
+    min-height: 50px;
+  }
+  .title-logo {
+    scale: 0.6;
+    margin-bottom: -@logo-margin-bottom;
+    min-width: 300px;
+    min-height: 60px;
+  }
+  .home-logo {
+    z-index: 2;
+    margin-bottom: -@logo-margin-bottom * 3;
+    min-width: 300px;
+    min-height: 120px;
+    max-height: 200px;
+  }
+  @media (max-width: @screen-sm-min) {
+    display: contents;
+  }
+}
+
+.auth-title img {
+  margin: auto;
+}
+
+.auth-wrap {
+  margin: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+  min-height: 620px;
+  padding: 1rem 0;
+
+  @media (min-width: @screen-lg) {
+  }
+
+  @media (max-width: @screen-md-min) {
+    
+  }
+
+  @media (max-height: 500px) {
+  }
+
+  @media (max-width: @screen-sm-min) {
+    //max-width: 80vw;
+    .auth-slider {
+      display: none;
+    }
+    .auth-main-content {
+      //max-width: 100%;
+    }
+  }
+
+  @media (max-width: @screen-xs) {
+    max-width: 95vw;
+    min-width: 300px;
+  }
+}
+
+.auth-card {
+  width: inherit;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: @background-radius-base;
+  background-image: url("../../assets/logo-background.svg");
+  background-size:     cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;  
+  border: none;
+
+  @media (max-width: @screen-sm-min) {
+    //margin-top: @logo-margin-top;
+    min-height: 490px;
+    max-width: 400px;
+    .auth-card-body {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    min-height: 620px;
+  }
+
+  & .ant-card-body {
+    padding: 0;
+    display: flex;
+    flex: 1;
+  }
+}
+
+.auth-card-header {
+  transform: scale(1.18);
+  margin-bottom: @logo-margin-bottom;
+  align-items: center;
+  //text-align: center;
+
+  
+
+  & img {
+    cursor: pointer;
+    height: @logo-height;
+    @media (max-width: @screen-md)
+    {
+        margin-top: -10px;
+        scale: 0.8;
+    }
+  }
+
+  @media (max-width: @screen-sm-min) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: @screen-xl) {
+  }
+}
+
+.auth-card-body {
+  margin-top: 30px;
+  max-width: 340px;
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.auth-logo-name {
+  font-weight: @font-weight-medium;
+  font-size: 24px;
+}
+
+.auth-main-content {
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 38%;
+  font-size: @font-size-base;
+  background: white;
+
+  // @media (max-width: @screen-md) {
+  //   padding-top: 12px;
+  //   padding-bottom: 12px;
+  // }
+}
+
+.auth-slider {
+  padding: 2rem 2rem;
+  img {
+    padding-top: 1rem;
+  }
+
+  @media (max-width: @screen-md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (max-width: @screen-sm) {
+    display: none;
+  }
+
+  color: @white;
+  font-size: @font-size-base;
+  width: 100%;
+  //background: linear-gradient(182.82deg, fade(@main-color, 40%) 27.3%, @main-100 97.65%);
+  flex: 1;
+  min-width: 0;
+  //max-width: 70%;
+  //display: flex;
+
+  .ant-carousel {
+    width: 100%;
+    height: 100%;
+
+    .slick-slider {
+      height: 100%;
+    }
+    .slick-list {
+      height: 100%;
+      .slick-track {
+        //margin-bottom: 30px;
+        height: 100%;
+      }
+      .slick-track div div{
+        height: 100%;
+      }
+    }
+  }
+
+  &-item {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 45vw;
+    max-height: 450px;
+
+    > svg {
+      max-width: min(100%, 46vw);
+      max-height: 480px;
+      margin-bottom: 2rem;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    .title {
+      margin-top: auto;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-weight: @font-weight-light;
+      color: @text-color-secondary;
+      max-width: 20rem;
+      text-align: center;
+    }
+  }
+  .slick-slider .div {
+    height: 100%;
+  }
+
+  .auth-slider-item {
+    font-size: 13px;
+    max-height: 100%;
+  }
+
+  .auth-slider-item h5{
+    font-size: 18px;
+    color: #B61414;
+  }
+
+  .floating-item-1 {
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: fade(@main-color, 60%);
+    border-radius: 50%;
+    transform: translate(20%, -50%);
+  }
+
+  .floating-item-2 {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    right: 15vw;
+    top: calc(var(--vh, 1vh) * 5);
+    background-color: fade(@main-color, 60%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+
+.auth-recon-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  & .ant-card-body {
+    padding-top: 10px;
+    @media screen and (min-width: @screen-sm) {
+      padding-top: 28px;
+    }
+    @media screen and (min-width: @screen-xxl) {
+      padding-top: 40px;
+    }
+  }
+}
+
+.confirm-content {
+  margin-bottom: 20px;
+  font-size: @font-size-base;
+
+  @media screen and (min-width: @screen-xxl) {
+    font-size: @font-size-lg;
+    margin-bottom: 40px;
+  }
+}
+
+.confirm-code-input {
+  margin-bottom: 24px;
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 40px;
+  }
+
+  & .react-code-input input {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.confirm-btn {
+  border-radius: @border-radius-base;
+  width: 100%;
+  font-weight: @font-weight-regular;
+  font-size: @font-size-base;
+}
+
+.reset-btn {
+  .confirm-btn;
+}
+
+.reset-form {
+  position: relative;
+
+  & .form-field {
+    margin-bottom: 10px;
+
+    & p {
+      margin-bottom: 24px;
+      font-size: @font-size-base;
+      @media screen and (min-width: @screen-xxl) {
+        font-size: @font-size-lg;
+      }
+    }
+  }
+
+  & .ant-form-item-explain-error {
+    text-align: left;
+
+    [dir=rtl] & {
+      text-align: right;
+    }
+  }
+
+  & .react-code-input input {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+body.auth {
+  .ant-layout {
+    background-image: url("../../assets/background.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    @media (max-width: @screen-sm-min) {
+      background: url("../../assets/background-mobile.svg") no-repeat center;
+      background-size: cover;
+    }
+    
+    @media (max-width: @screen-sm) {
+      //background: linear-gradient(182.82deg, fade(@main-color, 40%) 27.3%, @main-100 97.65%);
+    }
+  }
+}
+
+
+.floating-item-3 {
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: fade(@main-color, 60%);
+  border-radius: 50%;
+  transform: translate(-65%, 40%);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    right: 21%;
+    bottom: 0;
+    background-image: radial-gradient(white 15%, transparent 15%);
+    background-size: 8px 8px;
+  }
+}
+
+.form-padding-start {
+  flex: 1;
+  margin-top: calc(-@logo-height - @logo-margin-bottom);
+  min-height: calc(@logo-height + @logo-margin-bottom);
+}
+
+.form-padding-end {
+  flex: 1;
+  min-height: @logo-margin-bottom;
+}
+
+.floating-item-4 {
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: fade(@main-color, 60%);
+  border-radius: 50%;
+  transform: translate(20%, -50%);
+  display: none;
+
+  @media (max-width: @screen-sm) {
+    display: block;
+  }
+}
+
+.floating-item-5 {
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  right: 27vw;
+  top: calc(var(--vh, 1vh) * 10);
+  background-color: fade(@main-color, 60%);
+  border-radius: 50%;
+  z-index: -1;
+  display: none;
+
+  @media (max-width: @screen-sm) {
+    display: block;
+  }
+}
+
+
+

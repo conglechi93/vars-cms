@@ -1,0 +1,20 @@
+@import '@shared/styles/variable';
+
+.app-loader:not(.block) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.app-loader.block {
+  display: block;
+  padding-top: @margin-lg * 2;
+  padding-bottom: @margin-lg * 2;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+image: node:14-alpine3.14
+pipelines:
+  default:
+    - step:
+        script:
+          - docker build -t $DOCKER_REGISTRY/$DOCKER_IMAGE:1.0.0.r$BITBUCKET_BUILD_NUMBER .
+          - docker push $DOCKER_REGISTRY/$DOCKER_IMAGE:1.0.0.r$BITBUCKET_BUILD_NUMBER
+        services:
+          - docker
+definitions:
+  services:
+    docker:
+      memory: 3000
+
+# 163.44.207.12:5000
+# realtor-frontend

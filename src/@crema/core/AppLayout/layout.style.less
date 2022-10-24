@@ -1,0 +1,214 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.null-layout {
+  flex: auto;
+  display: flex;
+  position: relative;
+  min-height: calc(var(--vh, 1vh) * 100);
+  //background-color: @primary-color;
+
+  & .main-content-view {
+    padding: 0 @layout-horizontal-padding-default;
+    align-items: center;
+
+    @media (max-width: @screen-lg) {
+      padding: 0 @layout-horizontal-padding-lg;
+    }
+  }
+
+  & .main-auth-scrollbar {
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .footer {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  & .main-scrollbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    height: 100%;
+    max-height: calc(var(--vh, 1vh) * 100);
+  }
+}
+
+//Boxed Layout
+.boxedLayout {
+
+  @media screen and (min-width: (@screen-xl + 80)) {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+
+    #root {
+      .box-shadow(0px 0px 4px 2px rgba(0,0,0,0.12));
+    }
+
+    & .appMainFixedFooter {
+      & .app-main-footer {
+        max-width: 1260px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    & .mini-sidebar-toggle.ant-layout-sider,
+    & .mini-sidebar.ant-layout-sider,
+    & .userMiniHeader-sidebar.ant-layout-sider {
+      position: absolute;
+    }
+
+    & .app-header-mini-sidebar,
+    & .app-header-mini,
+    & .app-userMiniHeader {
+      position: absolute;
+      width: 100% !important;
+    }
+
+    & .mini-sidebar-toggle.ant-layout-sider-collapsed + .app-layout-mini-sidebar-main .app-header-mini-sidebar,
+    & .mini-sidebar.ant-layout-sider-collapsed + .app-layout-mini-main .app-header-mini,
+    & .userMiniHeader-sidebar.ant-layout-sider-collapsed + .app-layout-userMiniHeader-main .app-userMiniHeader {
+      width: 100% !important;
+    }
+
+    & .app-layout-mini-sidebar,
+    & .app-layout-mini,
+    & .app-layout-userMiniHeader {
+      padding-top: 0;
+    }
+
+    & .app-layout-mini-sidebar-main,
+    & .app-layout-mini-main,
+    & .app-layout-userMiniHeader-main {
+      padding-top: 71px;
+    }
+
+    & .coin-stats-content h3 {
+      font-size: @font-size-lg;
+    }
+
+    & .coin-stats-content span {
+      font-size: @font-size-sm;
+    }
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    max-width: 1460px;
+
+    & .appMainFixedFooter {
+      & .app-main-footer {
+        max-width: 1460px;
+      }
+    }
+  }
+}
+
+//Framed Layout
+.framedLayout {
+  @media screen and (min-width: @screen-xl + 80) {
+    padding: @framed-layout-base;
+    background-color: @secondary-color;
+
+    #root {
+      height: calc(var(--vh, 1vh) * 100 - 2 * @framed-layout-base);
+      overflow: hidden;
+      .box-shadow(0px 0px 4px 2px rgba(0,0,0,0.12));
+      border-radius: 12px;
+    }
+
+    &.framedHorLayout,
+    &.framedHorDarkLayout,
+    &.framedHorHeaderFixedLayout {
+
+      #root {
+        overflow-y: auto;
+      }
+    }
+
+    & .app-sidebar-scrollbar,
+    & .main-scrollbar,
+    & .app-mini-sidebar-scrollbar,
+    & .main-mini-sidebar-scrollbar,
+    & .main-mini-scrollbar,
+    & .standard-main-scrollbar,
+    & .userHeader-main-scrollbar,
+    & .main-userMiniHeader-scrollbar,
+    & .drawerLayout-main-scrollbar,
+    & .app-BitBucket-sidebar-scrollbar {
+      max-height: calc(var(--vh, 1vh) * 100 - (71px + 2 * @framed-layout-base));
+    }
+
+    & .app-standard-sidebar-scrollbar {
+      max-height: calc(var(--vh, 1vh) * 100 - (140px + 2 * @framed-layout-base));
+    }
+
+    & .app-userHeader-sidebar-scrollbar,
+    & .app-sidebar-userMiniHeader-scrollbar,
+    & .bitBucket-main-scrollbar,
+    & .bucket-minibar {
+      max-height: calc(var(--vh, 1vh) * 100 - (2 * @framed-layout-base));
+    }
+
+    & .app-layout {
+      height: calc(var(--vh, 1vh) * 100 -  2 * @framed-layout-base);
+      min-height: 10px;
+    }
+
+    & .null-layout {
+      min-height: 10px;
+      height: 100%;
+    }
+
+    & .main-auth-scrollbar {
+      min-height: 10px;
+    }
+
+    & .apps-container {
+      height: calc(var(--vh, 1vh) * 100 - (153px +  2 * @framed-layout-base));
+    }
+
+    & .app-layout-mini-sidebar,
+    & .app-layout-mini,
+    & .app-layout-hor,
+    & .app-layout-hor-header-fixed {
+      min-height: 100%;
+    }
+
+    & .mini-sidebar-toggle.ant-layout-sider,
+    & .mini-sidebar.ant-layout-sider,
+    & .userMiniHeader-sidebar.ant-layout-sider {
+      position: absolute;
+    }
+
+    & .app-header-mini-sidebar,
+    & .app-header-mini,
+    & .app-userMiniHeader {
+      position: absolute;
+      width: 100% !important;
+    }
+
+    & .mini-sidebar-toggle.ant-layout-sider-collapsed + .app-layout-mini-sidebar-main .app-header-mini-sidebar,
+    & .mini-sidebar.ant-layout-sider-collapsed + .app-layout-mini-main .app-header-mini,
+    & .userMiniHeader-sidebar.ant-layout-sider-collapsed + .app-layout-userMiniHeader-main .app-userMiniHeader {
+      width: 100% !important;
+    }
+
+    & .app-layout-mini-sidebar,
+    & .app-layout-mini,
+    & .app-layout-userMiniHeader {
+      padding-top: 0;
+    }
+
+    & .app-layout-mini-sidebar-main,
+    & .app-layout-mini-main,
+    & .app-layout-userMiniHeader-main {
+      padding-top: 71px;
+    }
+  }
+}

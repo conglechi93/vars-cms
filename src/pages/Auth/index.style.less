@@ -1,0 +1,444 @@
+@import '@shared/styles/variable';
+@import '@shared/styles/utils';
+
+.para {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .action-text {
+    font-size: 70px;
+    font-weight: @font-weight-bold;
+    margin: 0;
+    line-height: 1.15;
+    
+    @media (max-width: @screen-lg) {
+      font-size: 40px;
+    }
+  }
+
+  .app-name {
+    font-size: 70px;
+    font-weight: @font-weight-bold;
+    margin: 0;
+    color: @main-color;
+    line-height: 1.15;
+
+    @media (max-width: @screen-lg) {
+      font-size: 40px;
+    }
+  }
+
+  .description {
+    &:extend(.text-md);
+    font-weight: @font-weight-light;
+    color: @text-color-secondary;
+    margin: 1rem 0;
+
+    @media (max-height: 700px) {
+      margin: 0.5rem 0;
+      font-size: @text-md;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.sign {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.sign-content {
+  .ant-form{
+    width: 100%;
+  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-content div{  
+  text-align: center;
+  //display: flex;
+  font-size: 14px;
+}
+
+.sign-content .para .description{
+  font-size: 14.5px;
+}
+
+.sign-title {
+  max-height: 100px;
+  text-transform: uppercase;
+  font-size: 19px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.sign-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sign-text {
+  margin-right: 0.5rem;
+  font-weight: @font-weight-light;
+  color: @text-color-secondary;
+}
+
+.sign-link-action {
+  font-weight: @font-weight-bold;
+  color: @primary-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sign-link {
+  &:extend(.text-sm);
+  color: @primary-color;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sign-link-create {
+  &:extend(.text-sm);
+  color: #2641D2;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sign-checkbox {
+  font-size: 14px;
+}
+
+.sign-rules {
+  font-size: 10px;
+}
+
+
+.sign-text-primary {
+  color: @primary-color;
+}
+
+.sign-mult-text {
+  font-size: 10px;
+}
+
+.sign-socialLink span {
+  display: grid;
+  align-items: center;
+  margin: 0px 5px 0px 5px;
+  padding-top: 5px;
+}
+
+.sign-socialLink span button img{
+  width: 30px;
+  height: 30px;
+}
+
+.sign-socialLink {
+  display: flex;
+  align-items: center;
+
+  > .ant-btn {
+    margin: 0 1rem;
+    display: flex;
+    height: 37px;
+    width: 37px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid @grey-500;
+
+    &:hover {
+      background: @grey-300;
+    }
+
+    > img {
+      text-align: center;
+      align-items: center;
+      height: 20px;
+      width: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+.sign-btn {
+  border-radius: @border-radius-base;
+  width: 100%;
+  font-weight: @font-weight-regular;
+  font-size: @font-size-base;
+  // text-transform: uppercase;
+  line-height: 1;
+}
+
+.cancle-btn {
+  color: #000;
+}
+
+.sign-btn-full {
+  width: 100%;
+}
+
+.sign-icon-btn {
+  color: @text-color-secondary;
+  padding: 6px 4px 4px;
+  border: 0 none;
+  box-shadow: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: unset;
+  line-height: 1;
+  padding: 0;
+  margin: 0.5rem 0;
+
+  & span {
+    margin-right: 0 !important;
+  }
+  
+  & svg {
+    display: block;
+    font-size: 18px;
+  }
+
+  &:hover, &:focus {
+    color: @primary-color;
+    background-color: transparent;
+  }
+}
+
+.sign-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+
+  & .form-btn-field {
+
+  }
+
+  @media (max-width: @screen-sm) {
+    .ant-form-item {
+      flex-direction: row;
+    }
+  }
+}
+
+.underlineNone {
+  text-decoration: none;
+}
+
+.colorTextPrimary {
+  color: @primary-color;
+}
+
+.rememberMe {
+  position: relative;
+
+  & label {
+    margin-bottom: 0;
+  }
+
+  & span {
+    margin-bottom: 0;
+  }
+}
+
+.sign-with {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.7rem;
+
+  &-text {
+    &:extend(.text-xs);
+    &:extend(.text-grey);
+    margin-bottom: 0.7rem;
+    font-weight: @font-weight-light;
+    text-transform: capitalize;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    > span {
+      padding: 0 2rem;
+      background: white;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      top: 50%;
+      background-color: @grey-300;
+    }
+  }
+}
+
+.rememberMe {
+  margin-top: 0.5rem;
+  .sign-rules {
+    font-size: 11.5px;
+  }
+  .sign-btn-rules {
+    border: none;
+    background-color: #ffffff;
+    width: 70%;
+  }
+}
+
+
+.confirm-para {
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: @font-size-base;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: @screen-xxl) {
+    font-size: @font-size-lg;
+    margin-bottom: 30px;
+  }
+
+  & span {
+    margin-left: 4px;
+  }
+}
+
+.confirm-form {
+  justify-content: center;
+  min-width: 250px;
+  width: 100%;
+
+  
+  > .form-btn-field:last-child {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.otp-row {
+  margin: 1rem 0;
+}
+
+.otp-field {
+  margin: 0 !important;
+
+  & input {
+    font-size: 24px;
+    text-align: center;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background: #F4F4F4;
+
+    &:active,
+    &:focus {
+      background: @component-background;
+    }
+  }
+
+  .form-btn-field {
+    margin-top: 1rem;
+  }
+
+  .ant-form-item-explain {
+    display: none;
+  }
+}
+
+.form-btn-field {
+}
+
+.resend-after {
+  margin-left: auto;
+  flex: 1;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  .ant-statistic {
+    display: inline;
+
+    &-content {
+      display: inline;
+      font-size: 14px;
+      color: @primary-color;
+    }
+  }
+
+  &-text {
+    font-weight: @font-weight-light;
+  }
+
+  &-link {
+    color: @primary-color;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-captcha {
+  display: flex;
+}
+
+.form-captcha-input {
+  width:"40%";
+}
+
+.form-captcha-image {
+  margin-top: -5px;
+  width:"45%";
+}
+
+.form-captcha-button {
+  margin-top: -3px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-image: none;
+  cursor: pointer;
+  border: none;
+  width:"15%";
+}
+

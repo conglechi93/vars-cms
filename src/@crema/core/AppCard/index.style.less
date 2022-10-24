@@ -1,0 +1,102 @@
+@import '@shared/styles/variable';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: @card-bg-default;
+
+  &.bordered {
+    border: 1.5px solid @border-color-base;
+  }
+
+  & > .ant-card-head {
+    border-bottom: none;
+  }
+
+  & .ant-card-head-title {
+    font-weight: @font-weight-bold;
+  }
+
+  &.default {
+    .ant-card-head {
+      padding-top: @card-head-vertical-padding-default;
+      padding-bottom: @card-head-vertical-padding-default - @card-padding-base;
+    }
+
+    > .ant-card-head .ant-card-head-title {
+      font-size: @card-head-font-size-default;
+    }
+  }
+
+  &.large {
+    .ant-card-head {
+      padding-top: @card-head-vertical-padding-lg;
+      padding-bottom: @card-head-vertical-padding-lg - @card-padding-base;
+    }
+
+    > .ant-card-head .ant-card-head-title {
+      font-size: @card-head-font-size-lg;
+    }
+  }
+
+  &.secondary {
+    border: none;
+    background: @card-bg-secondary;
+  }
+
+  &.mini {
+    .ant-card-head {
+      padding-left: @card-padding-mini;
+      padding-right: @card-padding-mini;
+    }
+
+    .ant-card-body {
+      padding: @card-padding-mini;
+    }
+
+    &.large {
+      .ant-card-head {
+        padding-bottom: @card-head-vertical-padding-lg - @card-padding-mini;
+      }
+    }
+
+    &.default {
+      .ant-card-head {
+        padding-bottom: @card-head-vertical-padding-default - @card-padding-mini;
+      }
+    }
+  }
+
+  &.heightFull {
+    height: 100%;
+
+    & .ant-card-body {
+      flex: 1;
+    }
+  }
+
+  & .ant-card-actions {
+    background-color: transparent;
+  }
+}
+
+.card-outer-title {
+  font-size: @font-size-lg;
+  margin-bottom: 16px;
+  font-weight: @font-weight-bold;
+  color: @text-color;
+}
+
+.no-card-space {
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.no-card-space-ltr-rtl {
+  & .ant-card-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

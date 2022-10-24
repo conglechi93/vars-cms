@@ -1,0 +1,13 @@
+export const FORGET_PASSWORD_ROUTE = '/forget-password';
+export const FORGET_PASSWORD_INPUT_ROUTE = '/forget-password/input';
+export const FORGET_PASSWORD_CONFIRM_ROUTE = '/forget-password/otp';
+export const SIGN_IN_EMAIL_ROUTE = '/signin';
+export const SIGN_IN_OTP_ROUTE = '/signin/otp';
+export const SIGN_IN_OTP_CONFIRM_ROUTE = '/signin/otp/confirm';
+export const SIGN_UP_OTP_ROUTE = '/signup/otp';
+export const SIGN_UP_COMPANY_ROUTE = '/signup/company';
+export const SIGN_UP_PASSWORD_ROUTE = '/signup/password';
+export const SIGN_UP_GOOGLE_CONFIRM_PHONE_ROUTE = '/signup/google/confirm-phone';
+export const SIGN_UP_GOOGLE_CONFIRM_OTP_ROUTE = '/signup/google/confirm-otp';
+export const SIGN_UP_OTP_CONFIRM_ROUTE = '/signup/otp/confirm';
+export const RESET_PASSWORD_ROUTE = '/reset-password';

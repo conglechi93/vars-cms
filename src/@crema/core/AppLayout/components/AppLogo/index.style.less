@@ -1,0 +1,44 @@
+@import '@shared/styles/variable';
+@import '../../../../../shared/styles/mixin';
+
+.app-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  // @media (max-width: @screen-md-min) {
+  //   scale: 0.7;
+  // }
+
+  & img {
+    cursor: pointer;
+    max-height: 36px;
+    
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
+  &.mini {
+    & img {
+      height: 26px;
+    }
+  }
+}
+
+.app-logo-name {
+  font-weight: @font-weight-medium;
+  font-size: 24px;
+  display: none;
+
+  @media screen and (min-width: @screen-sm) {
+    display: block;
+  }
+
+  &.white {
+    color: @text-color-white;
+  }
+}
+
